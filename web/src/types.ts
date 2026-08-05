@@ -106,3 +106,40 @@ export interface DailyLoopRecord {
   commitment: string
   updatedAt: string
 }
+
+export type PaperCategory = '央国企' | '国考' | '省考'
+export type PaperAuthenticity = '官方样题' | '公开真题' | '回忆考情精编' | '考纲模拟'
+
+export interface PaperQuestion {
+  id: string
+  section: string
+  type: 'single' | 'multi'
+  question: string
+  options: string[]
+  answer: number[]
+  explanation: string
+}
+
+export interface ExamPaper {
+  id: string
+  title: string
+  organization: string
+  category: PaperCategory
+  year: number
+  authenticity: PaperAuthenticity
+  durationMinutes: number
+  description: string
+  sections: string[]
+  sourceLabel: string
+  sourceUrl: string
+  sourceNote: string
+  questions: PaperQuestion[]
+}
+
+export interface PaperProgress {
+  attempts: number
+  bestScore: number
+  lastScore: number
+  wrongQuestionIds: string[]
+  lastPracticedAt: string
+}

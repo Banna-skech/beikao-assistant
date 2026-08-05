@@ -9,6 +9,7 @@ import Pitfalls from './pages/Pitfalls'
 import Resources from './pages/Resources'
 import Courses from './pages/Courses'
 import Loop from './pages/Loop'
+import PaperBank from './pages/PaperBank'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/loop" element={<Loop />} />
         <Route path="/enterprises" element={<Enterprises />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/papers" element={<PaperBank />} />
         <Route path="/interview" element={<Interview />} />
         <Route path="/planner" element={<Planner />} />
         <Route path="/courses" element={<Courses />} />

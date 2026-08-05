@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import {
-  LayoutDashboard, Building2, Brain, MessageSquare, BookOpen, AlertTriangle, Library, Menu, X, ChevronRight, GraduationCap, Video, ClipboardCheck,
+  LayoutDashboard, Building2, Brain, MessageSquare, BookOpen, AlertTriangle, Library, Menu, X, ChevronRight, GraduationCap, Video, ClipboardCheck, FileQuestion,
 } from 'lucide-react'
 
 const navItems = [
@@ -9,6 +9,7 @@ const navItems = [
   { to: '/loop', icon: ClipboardCheck, label: '闭环执行', desc: 'Daily Loop' },
   { to: '/enterprises', icon: Building2, label: '企业名录', desc: 'Enterprises' },
   { to: '/quiz', icon: Brain, label: '笔试刷题', desc: 'Practice' },
+  { to: '/papers', icon: FileQuestion, label: '真题套卷', desc: 'Exam Papers' },
   { to: '/interview', icon: MessageSquare, label: '模拟面试', desc: 'Mock Interview' },
   { to: '/planner', icon: BookOpen, label: '备考规划', desc: 'Study Plan' },
   { to: '/courses', icon: Video, label: '课程学习', desc: 'Courses' },

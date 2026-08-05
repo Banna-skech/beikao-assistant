@@ -4,7 +4,7 @@ import type { TimelineEvent } from '../types'
 import { timeline } from '../data/timeline'
 import {
   Target, Clock, BookOpen, TrendingUp, ArrowRight, Calendar, Zap, AlertCircle,
-  ChevronDown, ChevronUp, ExternalLink, CheckCircle2, Building2, Brain, MessageSquare, AlertTriangle, Video, ClipboardCheck,
+  ChevronDown, ChevronUp, ExternalLink, CheckCircle2, Building2, Brain, MessageSquare, AlertTriangle, Video, ClipboardCheck, FileQuestion,
 } from 'lucide-react'
 
 const stats = [
@@ -17,6 +17,7 @@ const stats = [
 const quickActions = [
   { icon: ClipboardCheck, label: '闭环执行', desc: '今天照单完成', to: '/loop', color: 'rose' },
   { icon: Brain, label: '开始刷题', desc: '行测五大模块练习', to: '/quiz', color: 'indigo' },
+  { icon: FileQuestion, label: '真题套卷', desc: '按单位整套练习', to: '/papers', color: 'blue' },
   { icon: MessageSquare, label: '模拟面试', desc: '半结构化+群面训练', to: '/interview', color: 'violet' },
   { icon: BookOpen, label: '制定规划', desc: '个性化备考时间表', to: '/planner', color: 'emerald' },
   { icon: Video, label: '课程学习', desc: '老师课程+进度记录', to: '/courses', color: 'blue' },
@@ -109,7 +110,7 @@ export default function Dashboard() {
         {/* Timeline - takes 2 cols */}
         <div className="lg:col-span-2 space-y-4">
           {/* Quick actions */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 animate-slide-up" style={{ animationDelay: '0.1s' }}>
             {quickActions.map((a, i) => (
               <Link key={i} to={a.to}
                 className="group bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-200"
